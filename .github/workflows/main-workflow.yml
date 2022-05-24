@@ -33,7 +33,7 @@ jobs:
         flake8 . --count --exit-zero --max-line-length=80 --ignore=E111,E121,E126 --statistics
        
     - name: build sender
-      run: g++ -Wall -Wextra -o testsender TestSender.cpp BMS_Sender.c
+      run: g++ -Wall -Wextra -o testsender TestSendBatteryParameters.cpp SendBatteryParameters.c
   
     - name: Run Sender
       run: ./testsender
@@ -50,7 +50,7 @@ jobs:
       
     - name: Run and collect Receiver coverage
       run: |
-        coverage run --branch receiver_test.py
+        coverage run --branch TestReceiveBatteryParameters.py
         coverage html
         coverage report
           
@@ -62,4 +62,4 @@ jobs:
         retention-days: 21
       
     - name: Pipeline Sender and receiver
-      run: ./testsender | python receiver.py
+      run: ./testsender | python ReceiveBatteryParameters.py
