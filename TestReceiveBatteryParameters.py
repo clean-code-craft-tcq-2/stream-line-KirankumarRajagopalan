@@ -1,5 +1,5 @@
 import unittest
-import ReceivebatteryParameters
+import ReceivebatteryParameters as StreamLine_receiver
 
 Formatted_sample_Value_from_sender = [
             {"temp": 20, "SoC": 23, "ChargeRate": 0.5},
