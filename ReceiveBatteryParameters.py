@@ -7,7 +7,7 @@ def ReadDataFromSender():
         print(value)
         if "====" in value:
             continue
-        SplittedValues = value.split(',')
+        SplittedValues = value.split(',')#
         values_from_sender.append(FormatDataFromSender(SplittedValues))
     return values_from_sender
 
