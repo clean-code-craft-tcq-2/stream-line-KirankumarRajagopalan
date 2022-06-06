@@ -3,7 +3,7 @@ from statistics import mean
 
 def ReadDataFromSender():
     values_from_sender =[]
-    for value in sys.stdin:
+    for value in sys.stdin.readlines():
         print(value)
         if "====" in value:
             continue
