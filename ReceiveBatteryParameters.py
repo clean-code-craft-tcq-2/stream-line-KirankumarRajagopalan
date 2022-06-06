@@ -5,7 +5,7 @@ def ReadDataFromSender():
     values_from_sender =[]
     for value in sys.stdin.readlines():
         print(value)
-        if "====" in value:
+        if (value == "===============================================================================") :
             continue
         SplittedValues = value.split(',')#
         values_from_sender.append(FormatDataFromSender(SplittedValues))
