@@ -6,7 +6,7 @@ def ReadDataFromSender():
     incoming_values = sys.stdin.readlines()
     for value in incoming_values:
         print(value)
-        value = value.strip('\n')[0]
+        value = value.strip('\n')
         if (value == '==============================================================================='):
             continue
         SplittedValues = value.split(',')
