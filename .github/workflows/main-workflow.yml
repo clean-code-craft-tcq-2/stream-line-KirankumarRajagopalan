@@ -62,5 +62,5 @@ jobs:
         path: ./htmlcov
         retention-days: 21
       
-    - name: Pipeline Sender and receiver
-      run: ./testsender | python ReceiveBatteryParameters.py
+   # - name: Pipeline Sender and receiver
+   #   run: ./testsender | python ReceiveBatteryParameters.py
