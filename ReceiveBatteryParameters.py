@@ -4,8 +4,9 @@ from statistics import mean
 def ReadDataFromSender():
     values_from_sender =[]
     incoming_values = sys.stdin.readlines()
-    for value in incoming_values.strip('\n'):
+    for value in incoming_values:
         print(value)
+        value = value.strip('\n')[0]
         if (value == '===============================================================================') :
             continue
         SplittedValues = value.split(',')
