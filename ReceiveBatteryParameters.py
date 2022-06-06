@@ -3,11 +3,12 @@ from statistics import mean
 
 def ReadDataFromSender():
     values_from_sender =[]
-    for value in sys.stdin.readlines():
+    incoming_values = sys.stdin.readlines()
+    for value in incoming_values.strip('\n'):
         print(value)
-        if (value == "===============================================================================") :
+        if (value == '===============================================================================') :
             continue
-        SplittedValues = value.split(',')#
+        SplittedValues = value.split(',')
         values_from_sender.append(FormatDataFromSender(SplittedValues))
     return values_from_sender
 
