@@ -5,14 +5,14 @@ def ReadDataFromSender():
     values_from_sender =[]
     for value in sys.stdin:
         print(value)
+        if "====" in oneReading:
+            continue
         SplittedValues = value.split(',')
         values_from_sender.append(FormatDataFromSender(SplittedValues))
     return values_from_sender
 
 def FormatDataFromSender(oneReading):
     print(oneReading)
-    if "====" in oneReading:
-        return []
     temp = float((oneReading[0].split(":")[-1]).strip())
     SoC = float((oneReading[1].split(":")[-1]).strip())
     ChargeRate = float((oneReading[2].split(":")[-1]).strip())
