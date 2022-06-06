@@ -16,7 +16,7 @@ def ReadDataFromSender():
 def FormatDataFromSender(oneReading):
     print(oneReading)
     if (oneReading == '===============================================================================') :
-            return []
+        return []
     temp = float((oneReading[0].split(":")[-1]).strip())
     SoC = float((oneReading[1].split(":")[-1]).strip())
     ChargeRate = float((oneReading[2].split(":")[-1]).strip())
