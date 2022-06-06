@@ -7,7 +7,7 @@ def ReadDataFromSender():
     for value in incoming_values:
         print(value)
         value = value.strip('\n')[0]
-        if (value == '===============================================================================') :
+        if (value == '==============================================================================='):
             continue
         SplittedValues = value.split(',')
         values_from_sender.append(FormatDataFromSender(SplittedValues))
@@ -15,7 +15,7 @@ def ReadDataFromSender():
 
 def FormatDataFromSender(oneReading):
     print(oneReading)
-    if (oneReading == '===============================================================================') :
+    if (oneReading == '==============================================================================='):
         return []
     temp = float((oneReading[0].split(":")[-1]).strip())
     SoC = float((oneReading[1].split(":")[-1]).strip())
